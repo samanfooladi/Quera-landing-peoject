@@ -1,31 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>کوئرا لیست</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="src/style.css" />
-    <style type="text/tailwindcss">
-      @theme {
-        --color-primary-light: #2c7ef8;
-        --color-primary-hover-light: #075cd9;
-        --color-on-primary-light: #ffffff;
-        --color-background-light: #ffffff;
-        --color-foreground-light: #191c1e;
-        --color-surface-light: #ffffff;
-        --color-primary-dark: #3a86f8;
-        --color-primary-hover-dark: #6ba4fa;
-        --color-on-primary-dark: #ffffff;
-        --color-background-dark: #040810;
-        --color-foreground-dark: #e6e9ef;
-        --color-surface-dark: #e6e9ef;
-        --color-success: #90f677;
-        --color-error: #e63946;
-      }
-    </style>
+
+    <!-- Persian UI font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          container: { center: true, padding: "1rem" },
+        },
+      };
+    </script>
   </head>
-  <body class="bg-[#F5F6F8]">
+  <body class="bg-[#FFFFFF] text-[#0F172A]">
     <header class="relative z-20 border-b bg-[#FFFFFF]">
       <div
         class="container max-w-[1200px] flex items-center justify-between py-4 md:py-6"
@@ -91,6 +87,7 @@
       </div>
     </header>
 
+
     <!-- ===== HERO ===== -->
     <section
       class="relative overflow-hidden bg-gradient-to-b from-indigo-50 to-white pt-32"
@@ -101,12 +98,11 @@
           alt="bubble"
           class="absolute z-[1] pointer-events-none select-none top-[150px] right-[-90px] w-[320px] h-[320px] md:top-[150px] md:right-[10px] md:w-[452px] md:h-[452px]"
         />
-
-        <img
+<img
           src="./src/assets/images/Ellipse 129.png"
           alt="bubble"
           class="absolute z-[1] pointer-events-none select-none top-[20px] left-[-110px] w-[280px] h-[280px] md:top-[50px] md:left-[50px] md:w-[452px] md:h-[452px]"
-        />
+          />
         <img
           src="./src/assets/icons/star.svg"
           alt="star"
@@ -173,7 +169,7 @@
       <div class="container max-w-[1200px] relative z-10">
         <div class="mt-[88px]">
           <img
-            src=".."
+            src="./assets/image 39129.png"
             alt="پیش‌نمایش اپلیکیشن"
             class="mx-auto rounded-xl shadow-lg"
           />
@@ -183,6 +179,7 @@
 
     <!-- فاصله پایانی -->
     <div class="h-16 md:h-24"></div>
+
     <!-- comments  -->
     <section class="flex justify-center items-center">
       <!-- Title  -->
