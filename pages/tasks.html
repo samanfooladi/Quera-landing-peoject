@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>کوئرا لیست - مدیریت وظایف</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../src/style.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary-light: #2c7ef8;
+        --color-primary-hover-light: #075cd9;
+        --color-on-primary-light: #ffffff;
+        --color-background-light: #ffffff;
+        --color-foreground-light: #191c1e;
+        --color-surface-light: #ffffff;
+        --color-primary-dark: #3a86f8;
+        --color-primary-hover-dark: #6ba4fa;
+        --color-on-primary-dark: #ffffff;
+        --color-background-dark: #040810;
+        --color-foreground-dark: #e6e9ef;
+        --color-surface-dark: #e6e9ef;
+        --color-success: #90f677;
+        --color-error: #e63946;
+      }
+    </style>
+  </head>
+
+  <!-- Side bar  -->
+  <body class="bg-[#f5f6f8]" id="body">
+    <section class="flex flex-row">
+      <aside
+        class="bg-on-primary-light h-[calc(100vh-40px)] p-7 mr-7 mt-5 shadow-sm w-[272px] rounded-2xl"
+      >
+        <div class="flex flex-row gap-2 mt-5">
+          <img
+            src="../src/assets/images/user5.png"
+            alt="user5"
+            class="w-[48px] h-[48px] rounded-full"
+          />
+          <div class="flex flex-col gap-2">
+            <p class="text-foreground-light font-extrabold">سلام، رویا</p>
+            <p class="font-semibold text-xs text-[#7D7D7F]">
+              سه شنبه، ۵ بهمن ۱۴۰۲
+            </p>
+          </div>
+        </div>
+
+        <!-- continiue here -->
+      </aside>
+
+      <main class="flex flex-col flex-1 gap-2">
+        <div class="flex flex-col gap-2">
+          <p class="text-foreground-light font-extrabold">تسک های امروز</p>
+          <p class="font-semibold text-xs text-[#7D7D7F]">
+            3 تسک را باید انجام دهید
+          </p>
+        </div>
+        <div>
+          <button class="bg-inherit border-dashed text-on-primary-light px-4 py-2 rounded-lg text-primary-light border-[#ccc] border-2 cursor-pointer"><span>+</span> افزودن وظیفه جدید</button>
+        </div>
+        <div >
+<img src="../src/assets/images/2143202_Artboard 4x.png" alt="task" class="w-[24px] h-[24px]">
+        </div>
+      </main>
+    </section>
+    <script src="../src/scripts/main.js"></script>
+  </body>
+</html>

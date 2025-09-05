@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "YekanBakh";
+  src: url(./assets/fonts/yekan-bakh/YekanBakh-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "YekanBakh";
+  src: url(./assets/fonts/yekan-bakh/YekanBakh-SemiBold.woff2);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "YekanBakh";
+  src: url(./assets/fonts/yekan-bakh/YekanBakh-Bold.woff2);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "YekanBakh";
+  src: url(./assets/fonts/yekan-bakh/YekanBakh-Black.woff2);
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Kalameh";
+  src: url(./assets/fonts/kalameh/Kalameh-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Kalameh";
+  src: url(./assets/fonts/kalameh/Kalameh-Bold.woff2);
+  font-weight: 700;
+}
+
+:root{--sidebar-w:320px}
+.card-shadow{box-shadow:0 8px 24px rgba(15,23,42,0.06)}
+.card-shadow-dark{box-shadow:0 8px 24px rgba(2,6,23,0.6)}
+
+* {
+  font-family: "YekanBakh";
+}
