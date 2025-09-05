@@ -1,213 +1,293 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-  <head>
+   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>کوئرا لیست | تماس با ما</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="../src/style.css" />
-    <style type="text/tailwindcss">
-      @theme {
-        --color-primary-light: #2c7ef8;
-        --color-primary-hover-light: #075cd9;
-        --color-on-primary-light: #ffffff;
-        --color-background-light: #ffffff;
-        --color-foreground-light: #191c1e;
-        --color-surface-light: #ffffff;
-        --color-primary-dark: #3a86f8;
-        --color-primary-hover-dark: #6ba4fa;
-        --color-on-primary-dark: #ffffff;
-        --color-background-dark: #040810;
-        --color-foreground-dark: #e6e9ef;
-        --color-surface-dark: #e6e9ef;
-        --color-success: #90f677;
-        --color-error: #e63946;
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>کوئرا لیست</title>
+
+    <!-- Persian UI font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+  tailwind.config = {
+    theme: {
+      container: { center: true, padding: "1rem" },
+      extend: {
+        colors: {
+          'primary-light': '#2c7ef8',
+          'primary-hover-light': '#075cd9',
+          'on-primary-light': '#ffffff',
+          'background-light': '#ffffff',
+          'foreground-light': '#191c1e',
+          'surface-light': '#ffffff',
+          'primary-dark': '#3a86f8',
+          'primary-hover-dark': '#6ba4fa',
+          'on-primary-dark': '#ffffff',
+          'background-dark': '#040810',
+          'foreground-dark': '#e6e9ef',
+          'surface-dark': '#e6e9ef',
+          'success': '#90f677',
+          'error': '#e63946',
+        }
       }
-    </style>
+    }
+  }
+</script>
+     
   </head>
+
   <body
-    class="max-w-sm bg-[#F5F6F8] lg:max-w-[1070px] mx-auto flex justify-center items-center"
+    class=" bg-[#F5F6F8] "
   >
-    <section
-      class="flex flex-col items-center justify-center lg:flex-row lg:bg-background-light lg:grid lg:lg:grid-cols-[1fr_1px_1fr] lg:gap-8 lg:rounded-3xl relative"
-    >
-
-      <!-- tilte  -->
+    <!-- هدر -->
+    <header class="border-b bg-[#FFFFFF]">
       <div
-        class="text-center w-[312px] h-[101px] lg:w-[467px] lg:h-[156px] lg:m-5 lg:col-start-1 lg:row-start-1"
+        class="container max-w-[1200px] mx-auto flex items-center justify-between py-4 md:py-6 px-4"
       >
-        <h1
-          class="font-bold text-2xl h-43px lg:text-[40px] lg:text-start lg:mb-3"
-        >
-          تماس با ما
-        </h1>
-        <p class="lg:text-start lg:text-gray-600">
-          چیزی هست که بخوایی ازم بپرسی؟خوشحال میشم بتونم بهت کمکی کنم.
-        </p>
-      </div>
-
-      <!-- form  -->
-      <section
-        class="bg-background-light w-[328px] h-[500px] p-4 rounded-2xl mb-3 lg:w-[50%] lg:m-3 lg:col-start-3 lg:row-start-1 lg:row-span-3"
-      >
-        <form class="w-[296px] lg:w-[471px]">
-          <div class="flex gap-4 mb-3">
-            <div class="flex-1">
-              <label for="name" class="block mb-1">نام:</label>
-              <input
-                type="text"
-                name="name"
-                placeholder="نام شما"
-                class="border border-[#ccc] w-full p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light"
-                required
-              />
-            </div>
-            <div class="flex-1">
-              <label for="family" class="block mb-1">نام خانوادی:</label>
-              <input
-                type="text"
-                name="family"
-                placeholder="نام خانوادگی شما"
-                class="border border-[#ccc] w-full p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light"
-                required
-              />
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <label for="email">ایمیل:</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="ایمیل"
-              class="border border-[#ccc] w-full p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light"
-              required
-            />
-          </div>
-
-          <div class="mb-3">
-            <label class="block mb-1">شماره تماس:</label>
-            <input
-              type="tel"
-              name="phone"
-              placeholder="شماره تماس شما"
-              class="border border-gray-300 w-full p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light"
-              required
-            />
-          </div>
-
-          <div class="mb-4">
-            <label for="message" class="block mb-1">متن پیام شما:</label>
-            <textarea
-              name="message"
-              id=""
-              placeholder="متن پیام شما"
-              class="border border-[#ccc] h-[128px] w-full p-2 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-primary-light lg:h-[136px]"
-              required
-            ></textarea>
-          </div>
-          <button
-            class="bg-primary-light block mx-auto text-white p-2 w-[268px] rounded-lg hover:bg-primary-hover-light transition lg:w-full cursor-pointer"
-          >
-            ارسال پیام
-          </button>
-        </form>
-      </section>
-
-      <!-- midline -->
-      <div
-        class="hidden lg:block w-px border-gray-400 m-8 border-dashed border self-stretch col-start-2 row-start-1 row-span-3"
-      ></div>
-
-      <!-- Phone and Email -->
-      <section
-        class="flex flex-col items-center justify-center gap-6 pb-10 w-[328px] order-2 lg:w-0 lg:col-start-1 lg:row-span-2"
-      >
-        <div class="flex gap-4">
-          <div
-            class="w-[156px] bg-background-light flex items-center gap-3 p-4 rounded-2xl shadow-sm lg:bg-inherit lg:shadow-none lg:absolute lg:right-0 lg:top-60"
-          >
-            <div
-              class="bg-[#F5FBFF] rounded-full p-2 flex items-center justify-center shrink-0 lg:bg-inherit"
-            >
-              <img
-                src="../src/assets/icons/email.svg"
-                alt="ایمیل"
-                class="w-4 h-4 lg:w-6 lg:h-6"
-              />
-            </div>
-            <div class="flex flex-col">
-              <p class="text-sm font-bold lg:hidden">ایمیل</p>
-              <p
-                class="text-xs text-gray-600 truncate lg:font-bold lg:text-sm lg:text-black"
-              >
-                QueraList@gmail.com
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="w-[156px] bg-background-light flex items-center gap-3 p-4 rounded-2xl shadow-sm lg:bg-inherit lg:shadow-none lg:absolute lg:right-0 lg:top-50"
-          >
-            <div
-              class="bg-[#F5FBFF] rounded-full p-2 flex items-center justify-center shrink-0 lg:bg-inherit"
-            >
-              <img
-                src="../src/assets/icons/call.svg"
-                alt="تلفن" 
-                class="w-4 h-4 lg:w-6 lg:h-6"
-              />
-            </div>
-            <div class="flex flex-col">
-              <p class="text-sm font-bold lg:hidden">تلفن</p>
-              <p class="text-xs text-gray-600 lg:font-bold lg:text-sm lg:text-black">
-                0912134567
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Links  -->
         <div
-          class="flex gap-6 justify-center bg-background-light w-[328px] p-4 rounded-2xl shadow-sm lg:bg-inherit lg:shadow-none"
+          class="text-[16px] font-extrabold text-[#141414] cursor-pointer mx-auto md:hidden"
         >
-          <div
-            class="bg-[#F5FBFF] rounded-full p-2 flex items-center justify-center shrink-0 lg:bg-inherit lg:absolute right-5 bottom-5"
-          >
-            <a href="#">
-              <img
-                src="../src/assets/icons/github.svg"
-                alt="github"
-                class="w-8 h-8 hover:scale-110 transition"
-              />
-            </a>
-          </div>
-
-          <div
-            class="bg-[#F5FBFF] rounded-full p-2 flex items-center justify-center shrink-0 lg:absolute right-18 bottom-5 lg:bg-inherit"
-          >
-            <a href="#">
-              <img
-                src="../src/assets/icons/twitter.svg"
-                alt="twitter"
-                class="w-8 h-8 hover:scale-110 transition"
-              />
-            </a>
-          </div>
-
-          <div
-            class="bg-[#F5FBFF] rounded-full p-2 flex items-center justify-center shrink-0 lg:bg-inherit lg:absolute right-32 bottom-5"
-          >
-            <a href="#">
-              <img
-                src="../src/assets/icons/linkedin.svg"
-                alt="linkedin"
-                class="w-8 h-8 hover:scale-110 transition"
-              />
-            </a>
-          </div>
+          کوئرا لیست
         </div>
+        <button
+          class="md:hidden absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center"
+        >
+          <svg
+            class="w-6 h-6 text-[#141414]"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      
+        <!-- ناوبری دسکتاپ -->
+        <nav class="hidden md:flex items-center gap-9 text-[14px] font-medium">
+          <div class="text-[16px] font-extrabold text-[#141414] cursor-pointer">
+            کوئرا لیست
+          </div>
+          <a class="text-[#2C7EF8] font-semibold cursor-pointer">صفحه اصلی</a>
+          <a class="hover:text-[#0F172A] transition cursor-pointer"
+            >درباره ما</a
+          >
+          <a class="hover:text-[#0F172A] transition cursor-pointer"
+            >ارتباط با ما</a
+          >
+        </nav>
+
+        <!-- CTA دسکتاپ -->
+        <div class="hidden md:flex items-center gap-2">
+          <a
+            class="inline-flex items-center justify-center cursor-pointer rounded-xl bg-[#2C7EF8] text-white text-[14px] font-semibold px-5 py-2.5 shadow-md hover:bg-[#1E5CFD] transition"
+          >
+            ورود به اپلیکیشن
+          </a>
+          <button
+            class="w-10 h-10 flex items-center justify-center rounded-xl border border-slate-200 bg-white hover:bg-slate-50 transition shadow-sm"
+          >
+            <img
+              src="./src/assets/icons/toggle-theme.svg"
+              alt="theme toggle"
+              class="w-5 h-5"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-sm lg:max-w-[1070px] mx-auto flex justify-center items-center">
+      <section
+        class="flex flex-col items-center justify-center lg:flex-row lg:bg-background-light lg:grid lg:lg:grid-cols-[1fr_1px_1fr] lg:gap-8 lg:rounded-3xl relative"
+      >
+        <!-- tilte  -->
+        <div
+          class="text-center w-[312px] h-[101px] lg:w-[467px] lg:h-[156px] lg:m-5 lg:col-start-1 lg:row-start-1"
+        >
+          <h1
+            class="font-bold text-2xl h-43px lg:text-[40px] lg:text-start lg:mb-3"
+          >
+            تماس با ما
+          </h1>
+          <p class="lg:text-start lg:text-gray-600">
+            چیزی هست که بخوایی ازم بپرسی؟خوشحال میشم بتونم بهت کمکی کنم.
+          </p>
+        </div>
+
+        <!-- form  -->
+        <section
+          class="bg-background-light w-[328px] h-[500px] p-4 rounded-2xl mb-3 lg:w-[50%] lg:m-3 lg:col-start-3 lg:row-start-1 lg:row-span-3"
+        >
+          <form class="w-[296px] lg:w-[471px]">
+            <div class="flex gap-4 mb-3">
+              <div class="flex-1">
+                <label for="name" class="block mb-1">نام:</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="نام شما"
+                  class="border border-[#ccc] w-full p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light"
+                  required
+                />
+              </div>
+              <div class="flex-1">
+                <label for="family" class="block mb-1">نام خانوادی:</label>
+                <input
+                  type="text"
+                  name="family"
+                  placeholder="نام خانوادگی شما"
+                  class="border border-[#ccc] w-full p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email">ایمیل:</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="ایمیل"
+                class="border border-[#ccc] w-full p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label class="block mb-1">شماره تماس:</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="شماره تماس شما"
+                class="border border-gray-300 w-full p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light"
+                required
+              />
+            </div>
+
+            <div class="mb-4">
+              <label for="message" class="block mb-1">متن پیام شما:</label>
+              <textarea
+                name="message"
+                id=""
+                placeholder="متن پیام شما"
+                class="border border-[#ccc] h-[128px] w-full p-2 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-primary-light lg:h-[136px]"
+                required
+              ></textarea>
+            </div>
+            <button
+              class="bg-primary-light block mx-auto text-white p-2 w-[268px] rounded-lg hover:bg-primary-hover-light transition lg:w-full cursor-pointer"
+            >
+              ارسال پیام
+            </button>
+          </form>
+        </section>
+
+        <!-- midline -->
+        <div
+          class="hidden lg:block w-px border-gray-400 m-8 border-dashed border self-stretch col-start-2 row-start-1 row-span-3"
+        ></div>
+
+        <!-- Phone and Email -->
+        <section
+          class="flex flex-col items-center justify-center gap-6 pb-10 w-[328px] order-2 lg:w-0 lg:col-start-1 lg:row-span-2"
+        >
+          <div class="flex gap-4">
+            <div
+              class="w-[156px] bg-background-light flex items-center gap-3 p-4 rounded-2xl shadow-sm lg:bg-inherit lg:shadow-none lg:absolute lg:right-0 lg:top-60"
+            >
+              <div
+                class="bg-[#F5FBFF] rounded-full p-2 flex items-center justify-center shrink-0 lg:bg-inherit"
+              >
+                <img
+                  src="../src/assets/icons/email.svg"
+                  alt="ایمیل"
+                  class="w-4 h-4 lg:w-6 lg:h-6"
+                />
+              </div>
+              <div class="flex flex-col">
+                <p class="text-sm font-bold lg:hidden">ایمیل</p>
+                <p
+                  class="text-xs text-gray-600 truncate lg:font-bold lg:text-sm lg:text-black"
+                >
+                  QueraList@gmail.com
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-[156px] bg-background-light flex items-center gap-3 p-4 rounded-2xl shadow-sm lg:bg-inherit lg:shadow-none lg:absolute lg:right-0 lg:top-50"
+            >
+              <div
+                class="bg-[#F5FBFF] rounded-full p-2 flex items-center justify-center shrink-0 lg:bg-inherit"
+              >
+                <img
+                  src="../src/assets/icons/call.svg"
+                  alt="تلفن"
+                  class="w-4 h-4 lg:w-6 lg:h-6"
+                />
+              </div>
+              <div class="flex flex-col">
+                <p class="text-sm font-bold lg:hidden">تلفن</p>
+                <p
+                  class="text-xs text-gray-600 lg:font-bold lg:text-sm lg:text-black"
+                >
+                  0912134567
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Links  -->
+          <div
+            class="flex gap-6 justify-center bg-background-light w-[328px] p-4 rounded-2xl shadow-sm lg:bg-inherit lg:shadow-none"
+          >
+            <div
+              class="bg-[#F5FBFF] rounded-full p-2 flex items-center justify-center shrink-0 lg:bg-inherit lg:absolute right-5 bottom-5"
+            >
+              <a href="#">
+                <img
+                  src="../src/assets/icons/github.svg"
+                  alt="github"
+                  class="w-8 h-8 hover:scale-110 transition"
+                />
+              </a>
+            </div>
+
+            <div
+              class="bg-[#F5FBFF] rounded-full p-2 flex items-center justify-center shrink-0 lg:absolute right-18 bottom-5 lg:bg-inherit"
+            >
+              <a href="#">
+                <img
+                  src="../src/assets/icons/twitter.svg"
+                  alt="twitter"
+                  class="w-8 h-8 hover:scale-110 transition"
+                />
+              </a>
+            </div>
+
+            <div
+              class="bg-[#F5FBFF] rounded-full p-2 flex items-center justify-center shrink-0 lg:bg-inherit lg:absolute right-32 bottom-5"
+            >
+              <a href="#">
+                <img
+                  src="../src/assets/icons/linkedin.svg"
+                  alt="linkedin"
+                  class="w-8 h-8 hover:scale-110 transition"
+                />
+              </a>
+            </div>
+          </div>
+        </section>
       </section>
-    </section>
+    </main>
   </body>
 </html>
