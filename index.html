@@ -13,13 +13,32 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          container: { center: true, padding: "1rem" },
-        },
-      };
-    </script>
+   <script>
+  tailwind.config = {
+    theme: {
+      container: { center: true, padding: "1rem" },
+      extend: {
+        colors: {
+          'primary-light': '#2c7ef8',
+          'primary-hover-light': '#075cd9',
+          'on-primary-light': '#ffffff',
+          'background-light': '#ffffff',
+          'foreground-light': '#191c1e',
+          'surface-light': '#ffffff',
+          'primary-dark': '#3a86f8',
+          'primary-hover-dark': '#6ba4fa',
+          'on-primary-dark': '#ffffff',
+          'background-dark': '#040810',
+          'foreground-dark': '#e6e9ef',
+          'surface-dark': '#e6e9ef',
+          'success': '#90f677',
+          'error': '#e63946',
+        }
+      }
+    }
+  }
+</script>
+     
   </head>
   <body class="bg-[#FFFFFF] text-[#0F172A]">
     <header class="relative z-20 border-b bg-[#FFFFFF]">
