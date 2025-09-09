@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-   <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>کوئرا لیست</title>
@@ -14,36 +14,33 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-  tailwind.config = {
-    theme: {
-      container: { center: true, padding: "1rem" },
-      extend: {
-        colors: {
-          'primary-light': '#2c7ef8',
-          'primary-hover-light': '#075cd9',
-          'on-primary-light': '#ffffff',
-          'background-light': '#ffffff',
-          'foreground-light': '#191c1e',
-          'surface-light': '#ffffff',
-          'primary-dark': '#3a86f8',
-          'primary-hover-dark': '#6ba4fa',
-          'on-primary-dark': '#ffffff',
-          'background-dark': '#040810',
-          'foreground-dark': '#e6e9ef',
-          'surface-dark': '#e6e9ef',
-          'success': '#90f677',
-          'error': '#e63946',
-        }
-      }
-    }
-  }
-</script>
-     
+      tailwind.config = {
+        theme: {
+          container: { center: true, padding: '1rem' },
+          extend: {
+            colors: {
+              'primary-light': '#2c7ef8',
+              'primary-hover-light': '#075cd9',
+              'on-primary-light': '#ffffff',
+              'background-light': '#ffffff',
+              'foreground-light': '#191c1e',
+              'surface-light': '#ffffff',
+              'primary-dark': '#3a86f8',
+              'primary-hover-dark': '#6ba4fa',
+              'on-primary-dark': '#ffffff',
+              'background-dark': '#040810',
+              'foreground-dark': '#e6e9ef',
+              'surface-dark': '#e6e9ef',
+              success: '#90f677',
+              error: '#e63946',
+            },
+          },
+        },
+      };
+    </script>
   </head>
 
-  <body
-    class=" bg-[#F5F6F8] "
-  >
+  <body class="bg-[#F5F6F8]">
     <!-- هدر -->
     <header class="border-b bg-[#FFFFFF]">
       <div
@@ -71,7 +68,7 @@
             />
           </svg>
         </button>
-      
+
         <!-- ناوبری دسکتاپ -->
         <nav class="hidden md:flex items-center gap-9 text-[14px] font-medium">
           <div class="text-[16px] font-extrabold text-[#141414] cursor-pointer">
@@ -105,7 +102,9 @@
         </div>
       </div>
     </header>
-    <main class="max-w-sm lg:max-w-[1070px] mx-auto flex justify-center items-center">
+    <main
+      class="max-w-sm lg:max-w-[1070px] mx-auto flex justify-center items-center"
+    >
       <section
         class="flex flex-col items-center justify-center lg:flex-row lg:bg-background-light lg:grid lg:lg:grid-cols-[1fr_1px_1fr] lg:gap-8 lg:rounded-3xl relative"
       >
@@ -202,7 +201,7 @@
         >
           <div class="flex gap-4">
             <div
-              class="w-[156px] bg-background-light flex items-center gap-3 p-4 rounded-2xl shadow-sm lg:bg-inherit lg:shadow-none lg:absolute lg:right-0 lg:top-60"
+              class="w-[156px] bg-background-light flex items-center gap-3 p-4 rounded-2xl shadow-sm lg:bg-inherit lg:shadow-none lg:absolute lg:right-0 lg:top-44"
             >
               <div
                 class="bg-[#F5FBFF] rounded-full p-2 flex items-center justify-center shrink-0 lg:bg-inherit"
@@ -224,7 +223,7 @@
             </div>
 
             <div
-              class="w-[156px] bg-background-light flex items-center gap-3 p-4 rounded-2xl shadow-sm lg:bg-inherit lg:shadow-none lg:absolute lg:right-0 lg:top-50"
+              class="w-[156px] bg-background-light flex items-center gap-3 p-4 rounded-2xl shadow-sm lg:bg-inherit lg:shadow-none lg:absolute lg:right-0 lg:top-56"
             >
               <div
                 class="bg-[#F5FBFF] rounded-full p-2 flex items-center justify-center shrink-0 lg:bg-inherit"
@@ -263,7 +262,7 @@
             </div>
 
             <div
-              class="bg-[#F5FBFF] rounded-full p-2 flex items-center justify-center shrink-0 lg:absolute right-18 bottom-5 lg:bg-inherit"
+              class="bg-[#F5FBFF] rounded-full p-2 flex items-center justify-center shrink-0 lg:absolute right-16 mr-3 bottom-5 lg:bg-inherit"
             >
               <a href="#">
                 <img

@@ -59,7 +59,7 @@
         </div>
 
         <!-- Add Task Button -->
-        <div class="flex justify-center items-center px-4 mb-17">
+        <div class="flex justify-center items-center px-4 mb-17 hidden">
           <button
             class="w-full border-2 border-dashed border-gray-300 rounded-lg p-4 text-primary-light hover:text-[#7D7D7F] hover:border-primary-hover-light transition-colors cursor-pointer flex items-center justify-start gap-2"
           >
@@ -79,10 +79,76 @@
             <span>افزودن وظیفه جدید</span>
           </button>
         </div>
-        <!-- Task Input Area -->
-        <div class="rounded-lg p-8 text-center">
+        <!-- Add task Layout  -->
+        <section
+          class="bg-on-primary-light w-full mx-auto rounded-md border-[##E9E9E9] shadow-sm"
+        >
+          <input
+            type="text"
+            placeholder="نام تسک"
+            id="title-input"
+            class="block w-full mx-auto my-1 px-3 pt-2 rounded-md focus:outline-none placeholder:font-bold placeholder:text-base"
+          />
+          <input
+            type="text"
+            placeholder="توضیحات "
+            id="desc-input"
+            class="block w-full mx-auto mt-2 mb-5 px-3 rounded-md focus:outline-none placeholder:font-semibold placeholder:text-sm"
+          />
+
+          <div class="mr-5 flex flex-col items-start gap-3 mt-2">
+            <div
+              id="tags-handler"
+              class="inline-flex items-center gap-2 px-3 py-1 bg-on-primary-light text-gray-700 text-sm rounded-md border border-gray-200 cursor-pointer shadow-sm"
+            >
+              <div class="arrow transition-all duration-300">
+                <img src="../src/assets/icons/tag-right.svg" alt="" />
+              </div>
+              <span>تگ ها</span>
+            </div>
+
+            <div
+              id="priority-group"
+              class="flex items-center gap-2 px-2 py-1 rounded-md bg-on-primary-light shadow-lg border border-gray-100"
+            >
+              <button
+                type="button"
+                data-priority="low"
+                class="px-2 py-1 rounded-md bg-[#C3FFF1] text-[#11A483] text-sm cursor-pointer"
+              >
+                پایین
+              </button>
+
+              <button
+                type="button"
+                data-priority="medium"
+                class="px-2 py-1 rounded-md bg-[#FFEFD6] text-[#FFAF37] text-sm cursor-pointer"
+              >
+                متوسط
+              </button>
+              <button
+                type="button"
+                data-priority="high"
+                class="px-2 py-1 rounded-md bg-[#FFE2DB] text-[#FF5F37] text-sm cursor-pointer"
+              >
+                بالا
+              </button>
+            </div>
+          </div>
+          <div
+            class="border-t-1 border-[#E9E9E9] mt-5 flex items-center justify-end"
+          >
+            <button
+              id="addTaskBtn"
+              class="w-1/5 rounded-md text-on-primary-light text-center px-2 py-1 my-5 ml-3 bg-primary-light cursor-pointer hover:bg-primary-hover-light transition-all"
+            >
+              اضافه کردن تسک
+            </button>
+          </div>
+        </section>
+        <!-- Image Area-->
+        <div class="rounded-lg p-8 text-center hidden">
           <div class="max-w-md mx-auto">
-            <!-- Illustration placeholder -->
             <div
               class="w-full h-32 mx-auto mb-16 flex items-center justify-center"
             >
@@ -127,7 +193,6 @@
               ⋮
             </button>
           </div> -->
-         
 
           <div class="space-y-3"></div>
         </div>
