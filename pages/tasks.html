@@ -59,7 +59,7 @@
         </div>
 
         <!-- Add Task Button -->
-        <div class="flex justify-center items-center px-4 mb-17 hidden">
+        <div id="add-task" class="flex justify-center items-center px-4 mb-17">
           <button
             class="w-full border-2 border-dashed border-gray-300 rounded-lg p-4 text-primary-light hover:text-[#7D7D7F] hover:border-primary-hover-light transition-colors cursor-pointer flex items-center justify-start gap-2"
           >
@@ -81,7 +81,8 @@
         </div>
         <!-- Add task Layout  -->
         <section
-          class="bg-on-primary-light w-full mx-auto rounded-md border-[##E9E9E9] shadow-sm"
+          id="task-layout"
+          class="bg-on-primary-light w-full mx-auto rounded-md border-[##E9E9E9] shadow-sm hidden"
         >
           <input
             type="text"
@@ -101,15 +102,40 @@
               id="tags-handler"
               class="inline-flex items-center gap-2 px-3 py-1 bg-on-primary-light text-gray-700 text-sm rounded-md border border-gray-200 cursor-pointer shadow-sm"
             >
-              <div class="arrow transition-all duration-300">
+              <div id="tag-icon" class="arrow transition-all duration-300">
                 <img src="../src/assets/icons/tag-right.svg" alt="" />
               </div>
               <span>تگ ها</span>
             </div>
+            <!-- Selected Priority  -->
+            <div id="selected-priority">
+              <!-- <button
+                type="button"
+                data-priority="low"
+                class="flex gap-1 px-2 py-1 rounded-md bg-[#C3FFF1] text-[#11A483] text-sm cursor-pointer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-3 my-auto text-black"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+
+                پایین
+              </button> -->
+            </div>
 
             <div
               id="priority-group"
-              class="flex items-center gap-2 px-2 py-1 rounded-md bg-on-primary-light shadow-lg border border-gray-100"
+              class="items-center gap-2 px-2 py-1 rounded-md bg-on-primary-light shadow-lg border border-gray-100 hidden"
             >
               <button
                 type="button"
@@ -147,7 +173,7 @@
           </div>
         </section>
         <!-- Image Area-->
-        <div class="rounded-lg p-8 text-center hidden">
+        <div id="image" class="rounded-lg p-8 text-center">
           <div class="max-w-md mx-auto">
             <div
               class="w-full h-32 mx-auto mb-16 flex items-center justify-center"
