@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
@@ -27,24 +27,135 @@
   </head>
 
   <!-- Side bar  -->
-  <body class="bg-[#f5f6f8]" id="body">
+  <body
+    class="bg-[#f5f6f8] dark:bg-gray-900 text-gray-800 dark:text-gray-200"
+    id="body"
+  >
     <section class="flex flex-row">
-      <aside
-        class="bg-on-primary-light h-[calc(100vh-40px)] p-7 mr-7 mt-5 shadow-sm w-[300px] rounded-2xl"
+      <header
+        class="md:hidden flex items-center justify-center p-4 bg-white dark:bg-gray-800 shadow relative"
       >
-        <div class="flex flex-row gap-2 mt-5">
+        <!-- منوی همبرگری سمت راست -->
+        <button
+          id="menu-btn"
+          class="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col space-y-1"
+        >
+          <span class="block w-6 h-0.5 bg-black dark:bg-white"></span>
+          <span class="block w-6 h-0.5 bg-black dark:bg-white"></span>
+          <span class="block w-6 h-0.5 bg-black dark:bg-white"></span>
+        </button>
+        <!-- متن وسط -->
+        <h1 class="text-lg font-bold">کوئرا لیست</h1>
+        <!-- پروفایل سمت چپ -->
+        <img
+          src="../src/assets/images/user5.png"
+          alt="profile"
+          class="w-10 h-10 rounded-full absolute left-4 top-1/2 -translate-y-1/2"
+        />
+      </header>
+
+      <!-- موبایل منوی کشویی -->
+      <nav
+        id="mobile-menu"
+        class="md:hidden hidden flex-col bg-white dark:bg-gray-800 shadow p-4 space-y-3"
+      >
+        <a href="#" class="hover:text-blue-500">خانه</a>
+        <a href="#">تسک‌ها</a>
+        <a href="#">تقویم</a>
+        <a href="#">گزارشات</a>
+        <a href="#">تنظیمات</a>
+        <a href="#">پشتیبانی</a>
+        <a href="#">پروفایل</a>
+        <!-- دکمه تغییر حالت -->
+        <div
+          class="flex w-full bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden"
+        >
+          <button id="light-m" class="w-1/2 py-2 text-sm">روشن</button>
+          <button id="dark-m" class="w-1/2 py-2 text-sm">تاریک</button>
+        </div>
+        <a href="#" class="text-red-500 flex items-center gap-2">خروج </a>
+      </nav>
+
+      <!-- دسکتاپ سایدبار -->
+      <aside
+        class="hidden md:flex flex-col w-64 h-screen bg-white dark:bg-gray-800 p-4 shadow"
+      >
+        <!-- پروفایل -->
+        <div class="flex items-center gap-3 mb-6">
           <img
             src="../src/assets/images/user5.png"
-            alt="user5"
-            class="w-[48px] h-[48px] rounded-full"
+            class="w-14 h-14 rounded-full"
           />
-          <div class="flex flex-col gap-2">
-            <p class="text-foreground-light font-extrabold">سلام، رویا</p>
-            <p class="font-semibold text-xs text-[#7D7D7F]">
-              سه شنبه، ۵ بهمن ۱۴۰۲
+          <div>
+            <h2 class="font-bold">سلام، رویا</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              سه‌شنبه، ۵ بهمن ۱۴۰۲
             </p>
           </div>
         </div>
+        <!-- منو -->
+        <nav class="flex flex-col space-y-3 flex-1">
+          <a href="#" class="bg-blue-100 text-blue-600 px-3 py-2 rounded-lg"
+            >خانه</a
+          >
+          <a href="#" class="hover:text-blue-500">تسک‌ها</a>
+          <a href="#">تقویم</a>
+          <a href="#">گزارشات</a>
+          <a href="#">تنظیمات</a>
+          <a href="#">پشتیبانی</a>
+          <a href="#">پروفایل</a>
+        </nav>
+        <!-- دارک/لایت -->
+
+        <div class="flex items-center justify-center mt-6">
+          <div
+            class="relative flex w-[209px] h-[42px] rounded-lg bg-[#F7F7F7] dark:bg-[#0C1B31] p-1"
+          >
+            <!-- ورودی های رادیو -->
+            <input
+              type="radio"
+              name="theme"
+              id="light"
+              class="hidden peer/light"
+              checked
+            />
+            <input
+              type="radio"
+              name="theme"
+              id="dark"
+              class="hidden peer/dark"
+            />
+
+            <!-- بکگراند متحرک -->
+            <div
+              class="absolute top-1 left-1 h-[34px] w-[100px] rounded-md bg-[#FFFFFF] dark:bg-[#002247] transition-all peer-checked/dark:left-[105px]"
+            ></div>
+
+            <!-- دکمه روشن -->
+            <label
+              for="light"
+              class="relative z-10 w-[104px] h-full flex items-center justify-center gap-2 rounded-md cursor-pointer text-[#808080] dark:text-[#7A7A7A] peer-checked/light:text-[#525252] peer-checked/dark:text--[#FFFFFF]"
+            >
+              <a href="#" alt="روشن" class="w-4 h-4" />
+              <span>روشن</span>
+            </label>
+
+            <!-- دکمه تاریک -->
+            <label
+              for="dark"
+              class="relative z-10 w-[104px] h-full flex items-center justify-center gap-2 rounded-md cursor-pointer text-[#808080] dark:text-[#7A7A7A] peer-checked/light:text-[##808080] peer-checked/dark:text-[#FFFFFF]"
+            >
+              <a href="#" alt="تاریک" class="w-4 h-4" />
+              <span>تاریک</span>
+            </label>
+          </div>
+        </div>
+        <!-- <خط جدا کننده> -->
+        <!-- <div
+          class="relative z-10 w-px h-5 self-center bg-[#E9E9E9] dark:bg-[#2F3132]"
+        ></div> -->
+        <!-- خروج -->
+        <a href="#" class="mt-4 text-red-500 flex items-center gap-2"> خروج</a>
       </aside>
 
       <main class="flex flex-col flex-1 gap-6 py-15 px-70">
