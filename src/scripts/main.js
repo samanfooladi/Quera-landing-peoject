@@ -333,29 +333,66 @@ function showNotification(message, type = "info") {
   }, 3000);
 }
 
-//show action box
-function setupActionMenu(buttonId, boxId) {
-  const btn = document.getElementById(buttonId);
-  const box = document.getElementById(boxId);
+//Show action box
+function setupActionMenus() {
+  document.querySelectorAll(".task-box").forEach((taskBox) => {
+    const btn = taskBox.querySelector(".action-btn");
+    const box = taskBox.querySelector(".action-box");
 
-  if (!btn || !box) return; // safety check
+    if (!btn || !box) return;
 
-  // toggle menu
-  btn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    box.classList.toggle("hidden");
-  });
+    // toggle menu for this box only
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
 
-  // close when clicking outside
-  document.addEventListener("click", () => {
-    box.classList.add("hidden");
+      // close all other open menus first
+      document.querySelectorAll(".action-box").forEach((otherBox) => {
+        if (otherBox !== box) {
+          otherBox.classList.add("hidden");
+        }
+      });
+
+      box.classList.toggle("hidden");
+    });
+
+    // close when clicking outside
+    document.addEventListener("click", () => {
+      box.classList.add("hidden");
+    });
   });
 }
 
-// initialize
-document.addEventListener("DOMContentLoaded", () => {
-  setupActionMenu("action-btn", "action-box");
-});
+//Initialize
+document.addEventListener("DOMContentLoaded", setupActionMenus);
+
+//Add edit box
+function setupEditTask() {
+  const editSection = document.getElementById("edit-task");
+
+  document.querySelectorAll(".edit-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const taskBox = btn.closest(".task-box");
+
+      // Check if edit box is already visible below this task
+      const isOpenHere =
+        editSection.previousElementSibling === taskBox &&
+        !editSection.classList.contains("hidden");
+
+      if (isOpenHere) {
+        // 🔻 Hide it (toggle off)
+        editSection.classList.add("hidden");
+      } else {
+        // 🔼 Move it under this task and show
+        taskBox.insertAdjacentElement("afterend", editSection);
+        editSection.classList.remove("hidden");
+      }
+    });
+  });
+}
+
+//Call the function on page load
+document.addEventListener("DOMContentLoaded", setupEditTask);
 
 // Make functions globally available
 window.toggleTaskCompletion = toggleTaskCompletion;
