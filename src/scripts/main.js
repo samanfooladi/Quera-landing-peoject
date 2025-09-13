@@ -434,6 +434,18 @@ function setupEditTask() {
 //Call the function on page load
 document.addEventListener("DOMContentLoaded", setupEditTask);
 
+// Define the function
+function clearPriority() {
+  // hide the selected tag pill
+  document.getElementById("selected-priority").classList.add("hidden");
+
+  // show tags-handler
+  document.getElementById("tags-handler").classList.remove("hidden");
+
+  // show priority-group
+  document.getElementById("priority-group").classList.remove("hidden");
+}
+
 // Make functions globally available
 window.toggleTaskCompletion = toggleTaskCompletion;
 window.deleteTask = deleteTask;

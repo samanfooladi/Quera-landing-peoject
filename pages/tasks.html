@@ -372,20 +372,32 @@
           <div class="mr-5 flex flex-col items-start gap-3 mt-2">
             <div
               id="tags-handler"
-              class="inline-flex items-center gap-2 px-3 py-1 bg-on-primary-light text-gray-700 text-sm rounded-md border border-gray-200 cursor-pointer shadow-sm"
+              class="hidden items-center gap-2 px-3 py-1 bg-on-primary-light text-gray-700 text-sm rounded-md border border-gray-200 cursor-pointer shadow-sm"
             >
               <div id="tag-icon" class="arrow transition-all duration-300">
                 <img src="../src/assets/icons/tag-right.svg" alt="" />
               </div>
               <span>تگ ها</span>
             </div>
-            <!-- Selected Priority  -->
-            <div id="selected-priority">
+            <!-- Selected Priority -->
+            <div
+              id="selected-priority"
+              class="inline-flex items-center gap-2 px-2 py-1 bg-[#C3FFF1] rounded-md text-sm"
+            >
+              <!-- small X inside same pill -->
               <button
-                id="edit-task-tag"
+                id="clear-priority"
                 type="button"
+                class="text-base text-gray-600 focus:outline-none cursor-pointer"
+                onclick="clearPriority()"
+              >
+                ×
+              </button>
+
+              <span
+                id="edit-task-tag"
                 data-priority="low"
-                class="flex gap-1 px-2 py-1 rounded-md bg-[#C3FFF1] text-[#11A483] text-sm cursor-pointer"
+                class="flex items-center gap-1 text-[#11A483]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -401,14 +413,13 @@
                     d="M6 18 18 6M6 6l12 12"
                   />
                 </svg>
-
                 پایین
-              </button>
+              </span>
             </div>
 
             <div
               id="priority-group"
-              class="items-center gap-2 px-2 py-1 rounded-md bg-on-primary-light shadow-lg border border-gray-100"
+              class="hidden items-center gap-2 px-2 py-1 rounded-md bg-on-primary-light shadow-lg border border-gray-100"
             >
               <button
                 type="button"
