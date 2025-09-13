@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>کوئرا لیست</title>
@@ -14,9 +14,9 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
+      tailwind.config = {
         theme: {
-          container: { center: true, padding: "1rem" },
+          container: { center: true, padding: '1rem' },
           extend: {
             colors: {
               'primary-light': '#2c7ef8',
@@ -31,16 +31,15 @@
               'background-dark': '#040810',
               'foreground-dark': '#e6e9ef',
               'surface-dark': '#e6e9ef',
-              'success': '#90f677',
-              'error': '#e63946',
-            }
-          }
-        }
-        }
+              success: '#90f677',
+              error: '#e63946',
+            },
+          },
+        },
+      };
     </script>
-     
-</head>
-<body>
+  </head>
+  <body>
     <header class="relative z-20 border-b bg-[#FFFFFF]">
       <div
         class="container max-w-[1200px] flex items-center justify-between py-4 md:py-6"
@@ -74,12 +73,10 @@
             کوئرا لیست
           </div>
           <a
-            class="relative text-[#2C7EF8] cursor-pointer font-semibold after:absolute after:-bottom-2 after:right-0 after:left-0 after:h-[2px]"
+            class="relative text-[#0F172A] cursor-pointer font-semibold after:absolute after:-bottom-2 after:right-0 after:left-0 after:h-[2px]"
             >صفحه اصلی</a
           >
-          <a class="hover:text-[#0F172A] transition cursor-pointer"
-            >درباره ما</a
-          >
+          <a class="text-[#2C7EF8] transition cursor-pointer">درباره ما</a>
           <a class="hover:text-[#0F172A] transition cursor-pointer"
             >ارتباط با ما</a
           >
@@ -106,109 +103,228 @@
       </div>
     </header>
 
-    <main class="grid lg:grid-cols-2 gap-[24px] justify-center items-start my-[70px] w-[90%] max-w-[1100px] mx-auto">
-        
-        <div class="image-container order-1 lg:order-2 justify-items-center items-center">
-            <img src="../src/assets/images/about me image.png" alt="about" class="rounded-3xl object-cover h-[320px] lg:minmax(30%,550px)">
+    <main
+      class="grid lg:grid-cols-2 gap-[24px] justify-center items-start my-[70px] w-[90%] max-w-[1100px] mx-auto"
+    >
+      <div
+        class="image-container order-1 lg:order-2 justify-items-center items-center"
+      >
+        <img
+          src="../src/assets/images/about me image.png"
+          alt="about"
+          class="rounded-3xl object-cover h-[320px] lg:minmax(30%,550px)"
+        />
+      </div>
+
+      <div
+        class="about-text order-2 lg:px-[40px] lg:max-h-[656px] lg:py-[32px] lg:order-1 lg:row-span-2 lg:h-full flex flex-col gap-[16px] items-center lg:items-start max-w-[550px] lg:border-[1px] lg:border-[#F5F6F8] lg:bg-[#FFFFFF] lg:shadow-[0px_4px_63px_0px_#00000008] lg:rounded-2xl lg:mt-[8px]"
+      >
+        <div
+          class="flex flex-col gap-[8px] justify-items-center items-center lg:justify-start lg:items-start lg:text-right p-[20px]"
+        >
+          <h2
+            class="font-bold leading-none text-2xl lg:text-[40px] text-[#141414] lg:mb-5"
+          >
+            درباره من
+          </h2>
+          <h1
+            class="font-extrabold lg:font-normal lg:text-[32px] leading-none text-[28px] text-[#575757]"
+          >
+            محمد محمدی
+          </h1>
         </div>
-        
-        <div class="about-text order-2 lg:px-[40px] lg:max-h-[656px] lg:py-[32px] lg:order-1 lg:row-span-2 lg:h-full flex flex-col gap-[16px] items-center lg:items-start max-w-[550px] lg:border-[1px] lg:border-[#F5F6F8] lg:bg-[#FFFFFF] lg:shadow-[0px_4px_63px_0px_#00000008] lg:rounded-2xl lg:mt-[8px]">
-            <div class="flex flex-col gap-[8px] justify-items-center items-center lg:justify-start lg:items-start lg:text-right p-[20px]">
-                <h2 class="font-bold leading-none text-2xl lg:text-[40px] text-[#141414] lg:mb-5">درباره من</h2>
-                <h1 class="font-extrabold lg:font-normal lg:text-[32px] leading-none text-[28px] text-[#575757]">محمد محمدی</h1>
-            </div>
-            
-            <p class="text-center lg:justify-start leading-relaxed lg:items-start lg:text-right font-normal text-xs lg:text-lg rounded-2xl p-[16px] border-[1px] border-[#F5F6F8] bg-[#FFFFFF] shadow-[0px_4px_63px_0px_#00000008] lg:border-0 lg:shadow-none">
-                کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند. کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.
-                کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.
+
+        <p
+          class="text-center lg:justify-start leading-relaxed lg:items-start lg:text-right font-normal text-xs lg:text-lg rounded-2xl p-[16px] border-[1px] border-[#F5F6F8] bg-[#FFFFFF] shadow-[0px_4px_63px_0px_#00000008] lg:border-0 lg:shadow-none"
+        >
+          کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر
+          اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود
+          نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده
+          نمایند. کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای
+          معتبر اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر
+          دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده
+          نمایند. کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای
+          معتبر اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر
+          دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده
+          نمایند.
+        </p>
+      </div>
+
+      <div
+        class="cards order-3 lg:order-3 lg:rounded-2xl lg:p-[32px] md:max-w-[550px] md:max-h-[312px] lg:border-[1px] lg:border-[#F5F6F8] lg:bg-[#FFFFFF] lg:shadow-[0px_4px_63px_0px_#00000008]"
+      >
+        <div class="grid grid-cols-2 grid-rows-2 gap-[16px]">
+          <div
+            class="flex flex-col gap-[8px] py-[16px] px-[12px] rounded-2xl border-[1px] border-[#F5F6F8] bg-[#FFFFFF] lg:border-[#F5F5F5] lg:bg-[#F9FAFB]"
+          >
+            <h4
+              class="font-bold lg:font-semibold lg:text-[30px] leading-none text-lg text-[#070D31]"
+            >
+              1379
+            </h4>
+            <p class="font-normal leading-4 text-xs lg:text-lg text-[#444749]">
+              سال تولد
             </p>
+          </div>
+          <div
+            class="flex flex-col gap-[8px] py-[16px] px-[12px] rounded-2xl border-[1px] border-[#F5F6F8] bg-[#FFFFFF] lg:border-[#F5F5F5] lg:bg-[#F9FAFB]"
+          >
+            <h4
+              class="font-bold lg:font-semibold lg:text-[30px] leading-none text-lg text-[#070D31]"
+            >
+              تهران
+            </h4>
+            <p class="font-normal leading-4 text-xs lg:text-lg text-[#444749]">
+              محل زندگی
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-[8px] py-[16px] px-[12px] rounded-2xl border-[1px] border-[#F5F6F8] bg-[#FFFFFF] lg:border-[#F5F5F5] lg:bg-[#F9FAFB]"
+          >
+            <h4
+              class="font-bold lg:font-semibold lg:text-[30px] leading-none text-lg text-[#070D31]"
+            >
+              3.5
+            </h4>
+            <p class="font-normal leading-4 text-xs lg:text-lg text-[#444749]">
+              سال تجربه کار
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-[8px] py-[16px] px-[12px] rounded-2xl border-[1px] border-[#F5F6F8] bg-[#FFFFFF] lg:border-[#F5F5F5] lg:bg-[#F9FAFB]"
+          >
+            <h4
+              class="font-bold lg:font-semibold lg:text-[30px] leading-none text-lg text-[#070D31]"
+            >
+              +10
+            </h4>
+            <p class="font-normal leading-4 text-xs lg:text-lg text-[#444749]">
+              مشارکت در پروژه
+            </p>
+          </div>
         </div>
-        
-        <div class="cards order-3 lg:order-3 lg:rounded-2xl lg:p-[32px] md:max-w-[550px] md:max-h-[312px] lg:border-[1px] lg:border-[#F5F6F8] lg:bg-[#FFFFFF] lg:shadow-[0px_4px_63px_0px_#00000008]">
-            <div class="grid grid-cols-2 grid-rows-2 gap-[16px]">
-                <div class="flex flex-col gap-[8px] py-[16px] px-[12px] rounded-2xl border-[1px] border-[#F5F6F8] bg-[#FFFFFF] lg:border-[#F5F5F5] lg:bg-[#F9FAFB]">
-                    <h4 class="font-bold lg:font-semibold lg:text-[30px] leading-none text-lg text-[#070D31]">1379</h4>
-                    <p class="font-normal leading-4 text-xs lg:text-lg text-[#444749]">سال تولد</p>
-                </div>
-                <div class="flex flex-col gap-[8px] py-[16px] px-[12px] rounded-2xl border-[1px] border-[#F5F6F8] bg-[#FFFFFF] lg:border-[#F5F5F5] lg:bg-[#F9FAFB]">
-                    <h4 class="font-bold lg:font-semibold lg:text-[30px] leading-none text-lg text-[#070D31]">تهران</h4>
-                    <p class="font-normal leading-4 text-xs lg:text-lg text-[#444749]">محل زندگی</p>
-                </div>
-                <div class="flex flex-col gap-[8px] py-[16px] px-[12px] rounded-2xl border-[1px] border-[#F5F6F8] bg-[#FFFFFF] lg:border-[#F5F5F5] lg:bg-[#F9FAFB]">
-                    <h4 class="font-bold lg:font-semibold lg:text-[30px] leading-none text-lg text-[#070D31]">3.5</h4>
-                    <p class="font-normal leading-4 text-xs lg:text-lg text-[#444749]">سال تجربه کار</p>
-                </div>
-                <div class="flex flex-col gap-[8px] py-[16px] px-[12px] rounded-2xl border-[1px] border-[#F5F6F8] bg-[#FFFFFF] lg:border-[#F5F5F5] lg:bg-[#F9FAFB]">
-                    <h4 class="font-bold lg:font-semibold lg:text-[30px] leading-none text-lg text-[#070D31]">+10</h4>
-                    <p class="font-normal leading-4 text-xs lg:text-lg text-[#444749]">مشارکت در پروژه</p>
-                </div>
-            </div>
-        </div>
-
+      </div>
     </main>
-    
-     <footer class="flex flex-col justify-center m-auto gap-[40px] top-[890px] left-[16px] mt-[50px]">
-        <div class="flex justify-center m-auto w-[80%] object-contain max-w-[600px]">
-            <img src="../src/assets/images/quera list.png" alt="quera list">
+
+    <footer
+      class="flex flex-col justify-center m-auto gap-[40px] top-[890px] left-[16px] mt-[50px]"
+    >
+      <div
+        class="flex justify-center m-auto w-[80%] object-contain max-w-[600px]"
+      >
+        <img src="../src/assets/images/quera list.png" alt="quera list" />
+      </div>
+
+      <div
+        class="main-footer flex flex-col lg:flex-row justify-between items-center gap-[32px] lg:mx-[200px]"
+      >
+        <div
+          class="newsletter flex flex-col gap-[22px] lg:order-2 justify-center mx-[30px] max-w-[600px] self-center"
+        >
+          <div class="flex flex-col gap-[12px]">
+            <h2
+              class="text-base font-bold leading-none text-right text-[#242424]"
+            >
+              با ما در ارتباط باش
+            </h2>
+
+            <p
+              class="text-sm font-normal leading-relaxed text-right text-[#242424] w-[100%] max-w-[290px]"
+            >
+              اگه میخوای اولین نفری باشی که از فیچرهای جدید و تخفیفات با خبر
+              بشی.
+            </p>
+          </div>
+
+          <form
+            class="flex items-center rounded-lg overflow-hidden gap-2 relative"
+          >
+            <input
+              type="email"
+              placeholder="ایمیل"
+              class="flex-1 p-3 pl-14 border border-gray-400 rounded-lg text-gray-700 outline-none placeholder-gray-500"
+            />
+            <button
+              type="submit"
+              class="absolute left-2 rounded-lg px-4 py-2 bg-blue-600 text-white font-bold text-sm hover:bg-blue-700 transition-colors max-w-[350px]"
+            >
+              ارسال
+            </button>
+          </form>
         </div>
 
-        <div class="main-footer flex flex-col lg:flex-row justify-between items-center gap-[32px] lg:mx-[200px] ">
+        <div
+          class="address flex lg:order-1 justify-center max-w-[600px] mx-[30px] self-center"
+        >
+          <div
+            class="grid grid-cols-2 lg:grid-cols-1 max-w-[329px] gap-[8px] lg:flex lg:flex-col"
+          >
+            <div
+              class="map lg:order-3 row-span-2 flex flex-col lg:align-top-start lg:flex-row font-normal gap-[10px] text-right border-[1px] rounded-[16px] px-[16px] py-[16px] lg:p-[5px] justify-start items-center lg:border-none"
+            >
+              <img
+                src="../src/assets/icons/map.svg"
+                alt="map"
+                class="self-start max-w-[40px] lg:max-w-[24px] hidden lg:block"
+              />
+              <img
+                src="../src/assets/icons/map-md.svg"
+                alt="map"
+                class="max-w-[40px] lg:max-w-[24px] block lg:hidden"
+              />
 
-            <div class="newsletter flex flex-col gap-[22px] lg:order-2 justify-center mx-[30px] max-w-[600px] self-center">
-                <div class="flex flex-col gap-[12px] ">
-                    <h2 class="text-base font-bold leading-none text-right text-[#242424]">
-                        با ما در ارتباط باش
-                    </h2>
-
-                    <p class="text-sm font-normal leading-relaxed text-right text-[#242424] w-[100%] max-w-[290px]">
-                        اگه میخوای اولین نفری باشی که از فیچرهای جدید  و تخفیفات با خبر بشی.
-                    </p>
-                </div>
-                
-                <form class="flex items-center rounded-lg overflow-hidden gap-2 relative">
-                        <input 
-                          type="email" 
-                          placeholder="ایمیل" 
-                          class="flex-1 p-3 pl-14 border border-gray-400 rounded-lg text-gray-700 outline-none placeholder-gray-500"
-                        />
-                        <button 
-                          type="submit" 
-                          class="absolute left-2 rounded-lg px-4 py-2 bg-blue-600 text-white font-bold text-sm hover:bg-blue-700 transition-colors max-w-[350px]"
-                        >
-                          ارسال
-                        </button>
-                </form>
+              <span class="text-[#242424] text-[10px]/[160%] lg:text-sm/[160%]"
+                >آدرس دفتر مرکزی: پونک - خیابان اشرفی اصفهانی - خیابان صبحدل- بن
+                بست شب بو</span
+              >
             </div>
-            
-            <div class="address flex lg:order-1 justify-center max-w-[600px] mx-[30px] self-center">
-                <div class="grid grid-cols-2 lg:grid-cols-1 max-w-[329px] gap-[8px] lg:flex lg:flex-col">
-                    <div class="map lg:order-3 row-span-2 flex flex-col lg:align-top-start lg:flex-row font-normal gap-[10px] text-right border-[1px] rounded-[16px] px-[16px] py-[16px] lg:p-[5px] justify-start items-center lg:border-none">
-                        
-                        <img src="../src/assets/icons/map.svg" alt="map" class="self-start max-w-[40px] lg:max-w-[24px] hidden lg:block">
-                        <img src="../src/assets/icons/map-md.svg" alt="map" class="max-w-[40px] lg:max-w-[24px] block lg:hidden">
-                
-                        <span class="text-[#242424] text-[10px]/[160%] lg:text-sm/[160%]">آدرس دفتر مرکزی: پونک - خیابان اشرفی اصفهانی - خیابان صبحدل- بن بست شب بو</span>
-                    </div>
-                    <div class="call lg:order-2 flex flex-row align-baseline font-normal gap-[16px] text-right border-[1px] rounded-[16px] px-[16px] py-[10px] lg:p-[5px] justify-start items-center lg:border-none">
-                        <img src="../src/assets/icons/call.svg" alt="call" class="max-w-[40px] lg:max-w-[24px] hidden lg:block">
-                        <img src="../src/assets/icons/call-md.svg" alt="call" class="max-w-[40px] lg:max-w-[24px] block lg:hidden">
+            <div
+              class="call lg:order-2 flex flex-row align-baseline font-normal gap-[16px] text-right border-[1px] rounded-[16px] px-[16px] py-[10px] lg:p-[5px] justify-start items-center lg:border-none"
+            >
+              <img
+                src="../src/assets/icons/call.svg"
+                alt="call"
+                class="max-w-[40px] lg:max-w-[24px] hidden lg:block"
+              />
+              <img
+                src="../src/assets/icons/call-md.svg"
+                alt="call"
+                class="max-w-[40px] lg:max-w-[24px] block lg:hidden"
+              />
 
-                        <span class="text-[#242424] text-[10px]/[160%] lg:text-sm/[160%]">تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</span>
-                    </div>
-                    <div class="fax lg:order-1 flex flex-row align-baseline font-normal gap-[16px] text-right border-[1px] rounded-[16px] px-[16px] py-[10px] lg:p-[5px] justify-start items-center lg:border-none">
-                        <img src="../src/assets/icons/fax.svg" alt="fax" class="max-w-[40px] lg:max-w-[24px] hidden lg:block">
-                        <img src="../src/assets/icons/fax-md.svg" alt="fax" class="max-w-[40px] lg:max-w-[24px] block lg:hidden">
-                        
-                        <span class="text-[#242424] text-[10px]/[160%] lg:text-sm/[160%]">فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</span>
-                    </div>
-                </div>
-
+              <span class="text-[#242424] text-[10px]/[160%] lg:text-sm/[160%]"
+                >تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</span
+              >
             </div>
-        </div>
+            <div
+              class="fax lg:order-1 flex flex-row align-baseline font-normal gap-[16px] text-right border-[1px] rounded-[16px] px-[16px] py-[10px] lg:p-[5px] justify-start items-center lg:border-none"
+            >
+              <img
+                src="../src/assets/icons/fax.svg"
+                alt="fax"
+                class="max-w-[40px] lg:max-w-[24px] hidden lg:block"
+              />
+              <img
+                src="../src/assets/icons/fax-md.svg"
+                alt="fax"
+                class="max-w-[40px] lg:max-w-[24px] block lg:hidden"
+              />
 
-        <div class="credits justify-center m-auto w-[80%] max-w-[600px] mb-[30px]">
-            <p class="text-[#666666] text-center">تمامی حقوق مادی و معنوی این سایت متعلق به کوئرا لیست می‌باشد.</p>
+              <span class="text-[#242424] text-[10px]/[160%] lg:text-sm/[160%]"
+                >فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</span
+              >
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div
+        class="credits justify-center m-auto w-[80%] max-w-[600px] mb-[30px]"
+      >
+        <p class="text-[#666666] text-center">
+          تمامی حقوق مادی و معنوی این سایت متعلق به کوئرا لیست می‌باشد.
+        </p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
