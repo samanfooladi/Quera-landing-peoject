@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
@@ -151,20 +151,25 @@
           </div>
         </div>
         <!-- <خط جدا کننده> -->
-        <!-- <div
+        <div
           class="relative z-10 w-px h-5 self-center bg-[#E9E9E9] dark:bg-[#2F3132]"
-        ></div> -->
+        ></div>
         <!-- خروج -->
         <a href="#" class="mt-4 text-red-500 flex items-center gap-2"> خروج</a>
       </aside>
 
-      <main class="flex flex-col flex-1 gap-6 py-15 px-70">
+      <main class="flex flex-col flex-1 gap-6 py-15 px-70 max-w-[98%] m-auto">
         <!-- Header -->
         <div class="flex flex-col gap-2">
-          <p class="text-foreground-light font-extrabold text-2xl">
+          <p
+            class="text-foreground-light dark:text-gray-200 font-extrabold text-2xl"
+          >
             تسک های امروز
           </p>
-          <p class="font-semibold text-sm text-[#7D7D7F]">
+          <p
+            id="today-task-count"
+            class="font-semibold text-sm text-[#7D7D7F] dark:text-gray-400"
+          >
             3 تسک را باید انجام دهید
           </p>
         </div>
@@ -172,7 +177,7 @@
         <!-- Add Task Button -->
         <div id="add-task" class="flex justify-center items-center px-4 mb-17">
           <button
-            class="w-full border-2 border-dashed border-gray-300 rounded-lg p-4 text-primary-light hover:text-[#7D7D7F] hover:border-primary-hover-light transition-colors cursor-pointer flex items-center justify-start gap-2"
+            class="w-full border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-4 text-primary-light dark:text-blue-400 hover:text-[#7D7D7F] dark:hover:text-gray-300 hover:border-primary-hover-light dark:hover:border-blue-500 transition-colors cursor-pointer flex items-center justify-start gap-2"
           >
             <svg
               class="w-5 h-5"
@@ -193,60 +198,43 @@
         <!-- Add task Layout  -->
         <section
           id="task-layout"
-          class="bg-on-primary-light w-full mx-auto rounded-md border-[##E9E9E9] shadow-sm hidden"
+          class="bg-on-primary-light dark:bg-gray-800 w-full mx-auto rounded-md border-[##E9E9E9] dark:border-gray-600 shadow-sm hidden"
         >
           <input
             type="text"
             placeholder="نام تسک"
             id="title-input"
-            class="block w-full mx-auto my-1 px-3 pt-2 rounded-md focus:outline-none placeholder:font-bold placeholder:text-base"
+            class="block w-full mx-auto my-1 px-3 pt-2 rounded-md focus:outline-none placeholder:font-bold placeholder:text-base bg-white dark:bg-inherit text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-none"
           />
           <input
             type="text"
             placeholder="توضیحات "
             id="desc-input"
-            class="block w-full mx-auto mt-2 mb-5 px-3 rounded-md focus:outline-none placeholder:font-semibold placeholder:text-sm"
+            class="block w-full mx-auto mt-2 mb-5 px-3 rounded-md focus:outline-none placeholder:font-semibold placeholder:text-sm bg-white dark:bg-inherit text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-none"
           />
 
           <div class="mr-5 flex flex-col items-start gap-3 mt-2">
             <div
               id="tags-handler"
-              class="inline-flex items-center gap-2 px-3 py-1 bg-on-primary-light text-gray-700 text-sm rounded-md border border-gray-200 cursor-pointer shadow-sm"
+              class="inline-flex items-center gap-2 px-3 py-1 bg-on-primary-light dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm rounded-md border border-gray-200 dark:border-gray-600 cursor-pointer shadow-sm"
             >
               <div id="tag-icon" class="arrow transition-all duration-300">
-                <img src="../src/assets/icons/tag-right.svg" alt="" />
+                <img
+                  id="tag-icon-img"
+                  src="../src/assets/icons/tag-right.svg"
+                  alt=""
+                />
               </div>
               <span>تگ ها</span>
             </div>
             <!-- Selected Priority  -->
             <div id="selected-priority">
-              <!-- <button
-                type="button"
-                data-priority="low"
-                class="flex gap-1 px-2 py-1 rounded-md bg-[#C3FFF1] text-[#11A483] text-sm cursor-pointer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-3 my-auto text-black"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18 18 6M6 6l12 12"
-                  />
-                </svg>
-
-                پایین
-              </button> -->
+              <!-- Priority will be shown here when selected -->
             </div>
 
             <div
               id="priority-group"
-              class="items-center gap-2 px-2 py-1 rounded-md bg-on-primary-light shadow-lg border border-gray-100 hidden"
+              class="items-center gap-2 px-2 py-1 rounded-md bg-on-primary-light dark:bg-gray-700 shadow-lg border border-gray-100 dark:border-gray-600 hidden"
             >
               <button
                 type="button"
@@ -283,6 +271,9 @@
             </button>
           </div>
         </section>
+
+        <!-- Today's Tasks Container -->
+        <div id="today-tasks-container"></div>
         <!-- Image Area-->
         <div id="image" class="rounded-lg p-8 text-center">
           <div class="max-w-md mx-auto">
@@ -305,33 +296,44 @@
         </div>
 
         <!-- Completed Tasks Section -->
-        <div class="space-y-4">
+        <div id="completed-task" class="space-y-4">
           <div class="flex flex-col gap-2">
-            <h2 class="text-foreground-light font-extrabold text-xl">
+            <h2
+              class="text-foreground-light dark:text-gray-200 font-extrabold text-xl"
+            >
               تسک های انجام شده
             </h2>
-            <p class="text-sm text-gray-500">3 تسک انجام شده است.</p>
+            <p
+              id="completed-task-count"
+              class="text-sm text-gray-500 dark:text-gray-400"
+            >
+              3 تسک انجام شده است.
+            </p>
           </div>
 
           <!-- تسک -->
           <!-- <div
-            class="relative flex items-center justify-between bg-white shadow-sm rounded-lg px-5 py-6  "
+            class="relative flex items-center justify-between bg-white dark:bg-gray-800 shadow-sm rounded-lg px-5 py-6"
           >
-          <span class="absolute right-0 top-3 bottom-3 w-1 rounded bg-[#11A483]"></span>
+            <span
+              class="absolute right-0 top-3 bottom-3 w-1 rounded bg-[#11A483]"
+            ></span>
             <input
               type="checkbox"
               checked
               class="w-5 h-5 text-blue-500 border-gray-300 rounded focus:ring-0 cursor-pointer"
             />
-            <span class="flex-1 text-gray-800 text-sm mx-3">
+            <span class="flex-1 text-gray-800 dark:text-gray-200 text-sm mx-3">
               تماس با میل فروشچی در مورد تأخیر در ارسال
             </span>
-            <button class="text-gray-500 hover:text-gray-700 cursor-pointer">
+            <button
+              class="text-xl text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer"
+            >
               ⋮
             </button>
           </div> -->
 
-          <div class="space-y-3"></div>
+          <div id="completed-tasks-container" class="space-y-3"></div>
         </div>
       </main>
     </section>
