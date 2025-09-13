@@ -363,6 +363,7 @@ function initMobileMenu() {
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
 
+<<<<<<< HEAD
   if (menuBtn && mobileMenu) {
     menuBtn.addEventListener('click', function () {
       mobileMenu.classList.toggle('hidden');
@@ -375,3 +376,21 @@ document.addEventListener('DOMContentLoaded', function () {
   initDarkMode();
   initMobileMenu();
 });
+=======
+// Define the function
+function clearPriority() {
+  // hide the selected tag pill
+  document.getElementById("selected-priority").classList.add("hidden");
+
+  // show tags-handler
+  document.getElementById("tags-handler").classList.remove("hidden");
+
+  // show priority-group
+  document.getElementById("priority-group").classList.remove("hidden");
+}
+
+// Make functions globally available
+window.toggleTaskCompletion = toggleTaskCompletion;
+window.deleteTask = deleteTask;
+>>>>>>> a3e3948695bbdfd3d3f42fd83e073b0882cffc46
+>>>>>>> c067e523f9dc5f8c3e62191c59c095d95b34195d
