@@ -299,16 +299,20 @@
                 checked
                 class="w-5 h-5 text-blue-500 border-gray-300 rounded focus:ring-0 cursor-pointer mt-1"
               />
-              <span class="text-gray-800 text-sm mt-1">
+              <span id="pending-task-name" class="text-gray-800 text-sm mt-1">
                 انجام تسک های بوت کمپ فرانت اند
               </span>
               <span
+                id="pending-task-tag"
                 class="gap-1 px-2 py-1 rounded-md bg-[#C3FFF1] text-[#11A483] text-xs cursor-pointer"
               >
-                پایین
+                بالا
               </span>
             </div>
-            <p class="font-semibold text-xs text-[#7D7D7F] mt-3 mr-7">
+            <p
+              id="pending-task-description"
+              class="font-semibold text-xs text-[#7D7D7F] mt-3 mr-7"
+            >
               در حال توسعه پروژه دوم فرانت اند هستیم حتما باید روز جمعه تمومش
               کنیم چون وقت نداریم
             </p>
@@ -355,13 +359,13 @@
           <input
             type="text"
             placeholder="نام تسک"
-            id="title-input"
+            id="edit-task-name"
             class="block w-full mx-auto my-1 px-3 pt-2 rounded-md focus:outline-none placeholder:font-bold placeholder:text-base"
           />
           <input
             type="text"
             placeholder="توضیحات "
-            id="desc-input"
+            id="edit-task-description"
             class="block w-full mx-auto mt-2 mb-5 px-3 rounded-md focus:outline-none placeholder:font-semibold placeholder:text-sm"
           />
 
@@ -378,6 +382,7 @@
             <!-- Selected Priority  -->
             <div id="selected-priority">
               <button
+                id="edit-task-tag"
                 type="button"
                 data-priority="low"
                 class="flex gap-1 px-2 py-1 rounded-md bg-[#C3FFF1] text-[#11A483] text-sm cursor-pointer"
@@ -436,7 +441,7 @@
               id="addTaskBtn"
               class="w-1/5 rounded-md text-on-primary-light text-center px-2 py-1 my-5 ml-3 bg-primary-light cursor-pointer hover:bg-primary-hover-light transition-all"
             >
-              ویزایش تسک
+              ویرایش تسک
             </button>
           </div>
         </section>

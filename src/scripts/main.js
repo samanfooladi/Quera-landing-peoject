@@ -368,13 +368,32 @@ document.addEventListener("DOMContentLoaded", setupActionMenus);
 //Add edit box
 function setupEditTask() {
   const editSection = document.getElementById("edit-task");
+  const editName = document.getElementById("edit-task-name");
+  const editDesc = document.getElementById("edit-task-description");
+  const editTag = document.getElementById("edit-task-tag");
 
   document.querySelectorAll(".edit-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       const taskBox = btn.closest(".task-box");
 
-      // Check if edit box is already visible below this task
+      // Get values from the clicked task
+      const taskName = taskBox
+        .querySelector("#pending-task-name")
+        ?.textContent.trim();
+      const taskDesc = taskBox
+        .querySelector("#pending-task-description")
+        ?.textContent.trim();
+      const taskTag = taskBox
+        .querySelector("#pending-task-tag")
+        ?.textContent.trim();
+
+      // Fill edit form
+      if (taskName) editName.value = taskName;
+      if (taskDesc) editDesc.value = taskDesc;
+      if (taskTag) editTag.textContent = taskTag;
+
+      // Toggle edit section
       const isOpenHere =
         editSection.previousElementSibling === taskBox &&
         !editSection.classList.contains("hidden");
