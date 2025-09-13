@@ -371,11 +371,15 @@ function setupEditTask() {
   const editName = document.getElementById("edit-task-name");
   const editDesc = document.getElementById("edit-task-description");
   const editTag = document.getElementById("edit-task-tag");
+  const saveBtn = document.getElementById("editTaskBtn");
+
+  let currentTaskBox = null; // store which task is being edited
 
   document.querySelectorAll(".edit-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       const taskBox = btn.closest(".task-box");
+      currentTaskBox = taskBox; // remember the current task
 
       // Get values from the clicked task
       const taskName = taskBox
@@ -405,6 +409,25 @@ function setupEditTask() {
         editSection.classList.remove("hidden");
       }
     });
+  });
+
+  // Save changes back to task box
+  saveBtn.addEventListener("click", () => {
+    if (!currentTaskBox) return;
+
+    const taskNameEl = currentTaskBox.querySelector("#pending-task-name");
+    const taskDescEl = currentTaskBox.querySelector(
+      "#pending-task-description"
+    );
+    const taskTagEl = currentTaskBox.querySelector("#pending-task-tag");
+
+    if (taskNameEl) taskNameEl.textContent = editName.value;
+    if (taskDescEl) taskDescEl.textContent = editDesc.value;
+    if (taskTagEl) taskTagEl.textContent = editTag.textContent;
+
+    // Hide edit section after saving
+    editSection.classList.add("hidden");
+    currentTaskBox = null;
   });
 }
 
