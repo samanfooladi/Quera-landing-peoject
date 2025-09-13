@@ -141,6 +141,9 @@ function addNewTask() {
   // Reset form
   resetForm();
 
+  // Show success notification
+  showNotification('تسک با موفقیت اضافه شد', 'success');
+
   showAddTask();
 }
 
@@ -363,7 +366,6 @@ function initMobileMenu() {
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
 
-
   if (menuBtn && mobileMenu) {
     menuBtn.addEventListener('click', function () {
       mobileMenu.classList.toggle('hidden');
@@ -375,20 +377,71 @@ function initMobileMenu() {
 document.addEventListener('DOMContentLoaded', function () {
   initDarkMode();
   initMobileMenu();
+
+  // Update today's date
+  const todayElement = document.getElementById('today');
+  if (todayElement) {
+    todayElement.textContent = today;
+  }
 });
 
 // Define the function
 function clearPriority() {
   // hide the selected tag pill
-  document.getElementById("selected-priority").classList.add("hidden");
+  document.getElementById('selected-priority').classList.add('hidden');
 
   // show tags-handler
-  document.getElementById("tags-handler").classList.remove("hidden");
+  document.getElementById('tags-handler').classList.remove('hidden');
 
   // show priority-group
-  document.getElementById("priority-group").classList.remove("hidden");
+  document.getElementById('priority-group').classList.remove('hidden');
+}
+
+// Toggle task completion (alias for handleTaskCompletion)
+function toggleTaskCompletion(taskCard, isChecked) {
+  handleTaskCompletion(taskCard, isChecked);
+}
+
+// Delete task function
+function deleteTask(taskCard) {
+  if (confirm('آیا مطمئن هستید که می‌خواهید این تسک را حذف کنید؟')) {
+    taskCard.remove();
+    updateTaskCount();
+    showNotification('تسک با موفقیت حذف شد', 'success');
+  }
 }
 
 // Make functions globally available
 window.toggleTaskCompletion = toggleTaskCompletion;
 window.deleteTask = deleteTask;
+
+// اپدیت روز
+function showNotification(message, type = 'info') {
+  // Create notification element
+  const notification = document.createElement('div');
+  notification.className = `fixed top-4 right-4 px-4 py-2 rounded-lg shadow-lg z-50 ${
+    type === 'success'
+      ? 'bg-green-500 text-white'
+      : type === 'error'
+        ? 'bg-red-500 text-white'
+        : 'bg-blue-500 text-white'
+  }`;
+  notification.textContent = message;
+
+  document.body.appendChild(notification);
+
+  // Remove notification after 3 seconds
+  setTimeout(() => {
+    if (notification.parentNode) {
+      notification.parentNode.removeChild(notification);
+    }
+  }, 3000);
+}
+
+// Get today's date in Persian
+const today = new Date().toLocaleDateString('fa-IR', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  weekday: 'long',
+});

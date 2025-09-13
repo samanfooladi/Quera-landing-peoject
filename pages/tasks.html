@@ -23,6 +23,7 @@
         --color-success: #90f677;
         --color-error: #e63946;
       }
+      @custom-variant dark (&:where(.dark, .dark *));
     </style>
   </head>
 
@@ -88,7 +89,7 @@
           />
           <div>
             <h2 class="font-bold">سلام، رویا</h2>
-            <p class="text-sm text-gray-500 dark:text-gray-400">
+            <p id="today" class="text-sm text-gray-500 dark:text-gray-400">
               سه‌شنبه، ۵ بهمن ۱۴۰۲
             </p>
           </div>
@@ -204,13 +205,13 @@
             type="text"
             placeholder="نام تسک"
             id="title-input"
-            class="block w-full mx-auto my-1 px-3 pt-2 rounded-md focus:outline-none placeholder:font-bold placeholder:text-base bg-white dark:bg-inherit text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-none"
+            class="block w-full mx-auto my-1 px-3 pt-2 rounded-md focus:outline-none placeholder:font-bold placeholder:text-base bg-inherit border-none dark:bg-inherit text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-none"
           />
           <input
             type="text"
             placeholder="توضیحات "
             id="desc-input"
-            class="block w-full mx-auto mt-2 mb-5 px-3 rounded-md focus:outline-none placeholder:font-semibold placeholder:text-sm bg-white dark:bg-inherit text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-none"
+            class="block w-full mx-auto mt-2 mb-5 px-3 rounded-md focus:outline-none placeholder:font-semibold placeholder:text-sm bg-inherit border-none dark:bg-inherit text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-none"
           />
 
           <div class="mr-5 flex flex-col items-start gap-3 mt-2">
