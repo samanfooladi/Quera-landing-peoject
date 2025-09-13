@@ -380,10 +380,8 @@ function setupEditTask() {
         !editSection.classList.contains("hidden");
 
       if (isOpenHere) {
-        // 🔻 Hide it (toggle off)
         editSection.classList.add("hidden");
       } else {
-        // 🔼 Move it under this task and show
         taskBox.insertAdjacentElement("afterend", editSection);
         editSection.classList.remove("hidden");
       }
